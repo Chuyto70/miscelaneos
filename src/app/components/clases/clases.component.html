@@ -1,0 +1,15 @@
+<div [ngClass]="alerta" class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+</div>
+<button (click)="alerta = 'alert-danger'" class="btn btn-danger">
+    Rojo
+</button>
+<button (click)="alerta = 'alert-info'" class="btn btn-info">
+    Azul
+</button>
+
+<br><br>
+<h3 [appResaltado]="'orange'">Loading</h3>
+<button class="btn btn-primary" (click)="load()" [disabled]='validador'>
+   <i [ngClass] = "loading" class="fa"></i><span *ngIf = "loading == 'fa-save'"> Guardar archivo</span><span *ngIf="loading== 'fa-refresh fa-spin'">Enviando datos</span>
+</button>
